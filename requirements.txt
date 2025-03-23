@@ -1,0 +1,7 @@
+streamlit
+fastapi
+uvicorn
+requests
+beautifulsoup4
+textblob
+gtts
