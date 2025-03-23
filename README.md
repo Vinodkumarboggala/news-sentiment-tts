@@ -1,14 +1,14 @@
-from fastapi import FastAPI
-from utils import fetch_news, analyze_sentiment, generate_hindi_tts
+# News Sentiment Analysis & Hindi TTS
 
-app = FastAPI()
+## 📝 About
+This project scrapes news articles, analyzes sentiment, and generates a Hindi text-to-speech (TTS) summary.
 
+## 🚀 Features
+- Extracts 10+ news articles using BeautifulSoup.
+- Performs sentiment analysis (Positive, Negative, Neutral).
+- Generates a Hindi speech summary.
+- Provides an interactive web interface using Streamlit.
 
-@app.get("/analyze")
-def analyze(company: str):
-    articles = fetch_news(company)
-    sentiments = analyze_sentiment(articles)
-    audio_file = generate_hindi_tts(sentiments)
-
-    return {"articles": sentiments, "audio_file": audio_file}
-    
+## 📦 Installation
+```bash
+pip install -r requirements.txt
